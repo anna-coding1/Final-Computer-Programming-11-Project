@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.expensesappproject.ExpenseController"
+          hgap="10" vgap="10" alignment="center" style="-fx-padding: 20;">
+
+    <!-- title -->
+    <Label text="expense tracker" style="-fx-font-size: 20px; -fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <!-- category field -->
+    <Label text="category:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="categoryField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <!-- amount field -->
+    <Label text="amount (in $):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="amountField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- date field -->
+    <Label text="date (dd-mm-yyyy):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="dateField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- buttons -->
+    <Button text="add expense" onAction="#addExpense" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Button text="save and reload expenses" onAction="#saveAndReloadExpenses" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <Button text="delete expense" onAction="#deleteExpense" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <Button text="open expense" onAction="#openExpense" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <!-- expense list -->
+    <Label text="expenses:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <ListView fx:id="expenseList" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <!-- status label -->
+    <Label fx:id="statusLabel" GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+    <!-- total label -->
+    <Label fx:id="totalLabel" GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+</GridPane>
